@@ -15,10 +15,6 @@ library(ggplot2,tidyverse ,dplyr)
 
 
 is.na(airquality)
-airquality<- airquality %>% 
-  dplyr::rename(Temperature=Temp)
-
-
 clean_data<- na.omit(airquality)
 
 summary(clean_data)
@@ -27,5 +23,6 @@ summary(clean_data)
 
 data(clean_data)
 library(ggplot2)
-ggplot(clean_data, aes(x=Ozone,y=Temperature)+geom_point())
+ggplot(clean_data, aes(x=Ozone,y=Temperature))+geom_point()
 
+ggplot(clean_data, aes(x=Ozone,y=Wind))+geom_point()
